@@ -1,0 +1,96 @@
+''
+(316, 318) 0.105789698
+
+316
+Subject 8
+session 2
+trial 2
+24000
+
+318
+Subject 8
+session 2
+trial 2
+33600
+
+
+'_ALL_lb'
+(101, 102) 0.054118
+
+101
+Subject 3
+session 2
+trial 1
+0
+
+102
+Subject 3
+session 2
+trial 1
+4800
+
+'_ALL_lb_200-300'
+(107, 107) 0.03986
+
+107
+Subject 3
+session 2
+trial 1
+28800
+
+107
+Subject 3
+session 2
+trial 1
+28800
+
+
+'_Only_lb'
+(319, 227) 0.1937
+
+319
+Subject 8
+session 2
+trial 2
+38400
+
+227
+Subject 6
+session 2
+trial 1
+28800
+
+'_ALL_lb_200-300-OnALL'
+(101, 106) 0.0547922347847
+
+101
+Subject 3
+session 2
+trial 1
+0
+
+106
+Subject 3
+session 2
+trial 1
+24000
+
+
+
+modelSet = ['', '_ALL_lb', '_ALL_lb_200-300', '_Only_lb']
+subjects = ['Subject_1_D', 'Subject_2_D', 'Subject_3_D', 'Subject_4_D', 'Subject_5_D', 'Subject_6_D', 'Subject_7_D', 'Subject_8_D', 'Subject_9_D', 'Subject_10_D']
+sessions = ['1st_session','2nd_session']
+trials = ['1st_trial','2nd_trial']
+batch = [0,4800,9600,14400,19200,24000,28800,33600,38400,43200]
+
+1 1		11		21		31
+2 41	51		61		71 
+3 81	91		101		111
+4 121	131		141		151
+5 161	171		181		191
+6 201	211		221		231
+7 241	251		261		271
+8 281	291		301		311	
+9 321	331		341		351
+10 361	371		381		391
+   400
