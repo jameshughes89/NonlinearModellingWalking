@@ -38,7 +38,7 @@ session 2
 trial 1
 28800
 
-107
+107 (try 108?)
 Subject 3
 session 2
 trial 1
