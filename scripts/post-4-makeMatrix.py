@@ -29,7 +29,7 @@ for mod in modelSet:
 			for tri in trials:
 				for bat in batch:
 					print mod, sub, ses, tri, bat
-					count+= 1
+					#count+= 1
 					iFile = csv.reader(open('../MORE_DATA/' + sub + '_' + ses + '_' + tri + '_' + str(bat) + mod +'.csv','r'))
 			
 					data = []

@@ -79,7 +79,7 @@ for mod in modelSet:
 
 	abeMat2 = np.copy(np.array(abeMat))
 	abeMat2[np.isnan(abeMat2)] = sys.float_info.max
-	print 'min min', np.unravel_index(abeMat2.argmin(), abeMat2.shape), np.nanmin(abeMat2) 
+	print 'min min', np.unravel_index(abeMat2.argmin(), abeMat2.shape), np.nanmin(abeMat2), abeMat2[np.unravel_index(abeMat2.argmin(), abeMat2.shape)[0], np.unravel_index(abeMat2.argmin(), abeMat2.shape)[1]]
 	print np.argmin(np.nanmean(abeMat2, axis=0)), np.min(np.nanmean(abeMat2, axis=0))
 	plt.show()
 
@@ -132,8 +132,8 @@ for mod in modelSet:
 	abeMatSmall = np.array(abeMatSmall)
 	abeMatSmall2 = np.copy(abeMatSmall)
 	abeMatSmall2[np.isnan(abeMatSmall2)] = sys.float_info.max
-	print 'min min', np.unravel_index(abeMatSmall2.argmin(), abeMatSmall2.shape), np.nanmin(abeMatSmall2)
-	print np.argmin(np.nanmean(abeMatSmall2, axis=0)), np.min(np.nanmean(abeMatSmall2, axis=0))
+	#print 'min min', np.unravel_index(abeMatSmall2.argmin(), abeMatSmall2.shape), np.nanmin(abeMatSmall2)
+	#print np.argmin(np.nanmean(abeMatSmall2, axis=0)), np.min(np.nanmean(abeMatSmall2, axis=0))
 	plt.show()
 
 
@@ -179,8 +179,8 @@ for mod in modelSet:
 	abeMatSmall = np.array(abeMatSmall)
 	abeMatSmall2 = np.copy(abeMatSmall)
 	abeMatSmall2[np.isnan(abeMatSmall2)] = sys.float_info.max
-	print 'min min', np.unravel_index(abeMatSmall2.argmin(), abeMatSmall2.shape), np.nanmin(abeMatSmall2)
-	print np.argmin(np.nanmean(abeMatSmall2, axis=0)), np.min(np.nanmean(abeMatSmall2, axis=0))
+	#print 'min min', np.unravel_index(abeMatSmall2.argmin(), abeMatSmall2.shape), np.nanmin(abeMatSmall2)
+	#print np.argmin(np.nanmean(abeMatSmall2, axis=0)), np.min(np.nanmean(abeMatSmall2, axis=0))
 	plt.show()
 
 
