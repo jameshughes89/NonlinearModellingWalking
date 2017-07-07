@@ -21,6 +21,7 @@ for mod in modelSet:
 
 	matrixMSE = []
 	matrixABE = []
+	matrixREL = []
 
 	count = 0
 
@@ -42,22 +43,31 @@ for mod in modelSet:
 		
 					allmsE = []
 					allabE = []
+					allrel = []
 
 					for f in funcs:
 						#try:			
 						msE = []
-						abE = []			
+						abE = []	
+						rel = []		
 						for l in data:
 							try:
-								err = l[-1] - f(l[0],l[1],l[2],l[3],l[4],l[5],l[6],l[7],l[8],l[9],l[10],l[11],l[12],l[13],l[14],l[15],l[16],l[17])
+								real = l[-1]
+								pred = f(l[0],l[1],l[2],l[3],l[4],l[5],l[6],l[7],l[8],l[9],l[10],l[11],l[12],l[13],l[14],l[15],l[16],l[17]) 								
+								err = real - pred								
+								#err = l[-1] - f(l[0],l[1],l[2],l[3],l[4],l[5],l[6],l[7],l[8],l[9],l[10],l[11],l[12],l[13],l[14],l[15],l[16],l[17])
 							except (OverflowError, ZeroDivisionError, ValueError):
+								real = l[-1]
+								pred = float('nan')								
 								err = np.float('nan')
 
 							msE.append(err**2)
 							abE.append(abs(err))
+							rel.append(1 - (pred/real))
 				
 						allmsE.append((np.mean(msE)))
 						allabE.append((np.mean(abE)))
+						allrel.append((np.mean(rel)))
 						#allmsE.append(log(np.mean(msE)))
 						#allabE.append(log(np.mean(abE)))
 						'''
@@ -71,10 +81,11 @@ for mod in modelSet:
 
 					matrixMSE.append(allmsE)
 					matrixABE.append(allabE)
+					matrixREL.append(allrel)
 
 	np.savetxt('msEmat' + mod + '.csv', matrixMSE, delimiter=",")
 	np.savetxt('abEmat' + mod + '.csv', matrixABE, delimiter=",")
-
+	np.savetxt('relmat' + mod + '.csv', matrixREL, delimiter=",")
 
 
 '''
@@ -91,6 +102,7 @@ for mod in modelSet:
 
 	matrixMSE = []
 	matrixABE = []
+	matrixREL = []
 
 	count = 0
 
@@ -112,6 +124,7 @@ for mod in modelSet:
 		
 					allmsE = []
 					allabE = []
+					allrel = []
 
 					for f in funcs:
 						#try:			
@@ -119,15 +132,22 @@ for mod in modelSet:
 						abE = []			
 						for l in data:
 							try:
-								err = l[-1] - f(l[0],l[1],l[2],l[3],l[4],l[5],l[6],l[7],l[8],l[9],l[10],l[11],l[12],l[13],l[14],l[15],l[16],l[17])
+								real = l[-1]
+								pred = f(l[0],l[1],l[2],l[3],l[4],l[5],l[6],l[7],l[8],l[9],l[10],l[11],l[12],l[13],l[14],l[15],l[16],l[17]) 								
+								err = real - pred								
+								#err = l[-1] - f(l[0],l[1],l[2],l[3],l[4],l[5],l[6],l[7],l[8],l[9],l[10],l[11],l[12],l[13],l[14],l[15],l[16],l[17])
 							except (OverflowError, ZeroDivisionError, ValueError):
+								real = l[-1]
+								pred = float('nan')								
 								err = np.float('nan')
 
 							msE.append(err**2)
 							abE.append(abs(err))
-				
+							rel.append(1 - (pred/real))				
+
 						allmsE.append((np.mean(msE)))
 						allabE.append((np.mean(abE)))
+						allrel.append((np.mean(rel)))
 						#allmsE.append(log(np.mean(msE)))
 						#allabE.append(log(np.mean(abE)))
 						'''
@@ -141,10 +161,11 @@ for mod in modelSet:
 
 					matrixMSE.append(allmsE)
 					matrixABE.append(allabE)
+					matrixREL.append(allre)
 
 	np.savetxt('msEmat' + mod + '-OnALL.csv', matrixMSE, delimiter=",")
 	np.savetxt('abEmat' + mod + '-OnALL.csv', matrixABE, delimiter=",")
-
+	np.savetxt('relmat' + mod + '-OnALL.csv', matrixREL, delimiter=",")
 
 
 
