@@ -6,7 +6,7 @@ import sys
 from math import *
 
 
-modelSet = ['', '_ALL_lb', '_ALL_lb_200-300', '_Only_lb']
+modelSet = ['', '_ALL_lb', '_ALL_lb_200-300']
 subjects = ['Subject_1_D', 'Subject_2_D', 'Subject_3_D', 'Subject_4_D', 'Subject_5_D', 'Subject_6_D', 'Subject_7_D', 'Subject_8_D', 'Subject_9_D', 'Subject_10_D']
 sessions = ['1st_session','2nd_session']
 trials = ['1st_trial','2nd_trial']
@@ -63,11 +63,15 @@ for mod in modelSet:
 
 							msE.append(err**2)
 							abE.append(abs(err))
-							rel.append(abs(1 - (pred/real)))
-				
+							if np.isinf(1-(pred/real)):
+								rel.append(np.float('nan'))								
+							else:
+								rel.append(abs(1 - (pred/real)))
+
+						
 						allmsE.append((np.nanmean(msE)))
 						allabE.append((np.nanmean(abE)))
-						allrel.append((np.nanmean(rel)))
+						allrel.append((np.nanmean(rel)))				
 						#allmsE.append(log(np.mean(msE)))
 						#allabE.append(log(np.mean(abE)))
 
@@ -144,7 +148,10 @@ for mod in modelSet:
 
 							msE.append(err**2)
 							abE.append(abs(err))
-							rel.append(abs(1 - (pred/real)))
+							if np.isinf(1-(pred/real)):
+								rel.append(np.float('nan'))								
+							else:
+								rel.append(abs(1 - (pred/real)))
 				
 						allmsE.append((np.nanmean(msE)))
 						allabE.append((np.nanmean(abE)))
@@ -222,7 +229,10 @@ for mod in modelSet:
 
 							msE.append(err**2)
 							abE.append(abs(err))
-							rel.append(abs(1 - (pred/real)))
+							if np.isinf(1-(pred/real)):
+								rel.append(np.float('nan'))								
+							else:
+								rel.append(abs(1 - (pred/real)))
 
 						allmsE.append((np.nanmean(msE)))
 						allabE.append((np.nanmean(abE)))
