@@ -20,15 +20,15 @@ for mod in modelSet:
 	relMat = np.array(relMat)
 	relMat = relMat.astype(np.float)
 
-	'''
+	
 	for i in range(len(relMat)):
 		for j in range(len(relMat[i])):
 			#relMat[i][j] = log(relMat[i][j])		
-			if relMat[i][j] > .75 :
+			if relMat[i][j] > 10 :
 			#	relMat[i][j] = np.float('nan')
-				relMat[i][j] = np.float(.75)
+				relMat[i][j] = np.float(10)
 
-	'''
+	
 
 
 	font = {'family' : 'normal',
