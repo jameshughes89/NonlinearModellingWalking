@@ -1,3 +1,5 @@
+THIS IS BASED ON THE ABS ERROR
+
 ''
 (316, 318) 0.105789698
 
@@ -95,3 +97,92 @@ batch = [0,4800,9600,14400,19200,24000,28800,33600,38400,43200]
 9 320	330		340		350
 10 360	370		380		390
    399
+
+
+THIS IS BASED ON THE REL ERROR
+
+
+''
+(106, 109) 0.781349751655 0.781349751655
+
+106
+Subject 3
+session 2
+trial 1
+28800
+
+109
+106
+Subject 3
+session 2
+trial 1
+43200
+
+_ALL_lb
+(368, 361) 0.188305283363 0.188305283363
+
+368
+Subject 10
+session 1
+trial 1
+take 
+38400
+
+361
+Subject 10
+session 1
+trial 1
+take 
+4800
+
+_ALL_lb_200-300
+(365, 364) 0.155274072875 0.155274072875
+
+365
+Subject 10
+session 1
+trial 1
+take 
+24000
+
+365
+Subject 10
+session 1
+trial 1
+take 
+24000
+
+_Only_lb
+(365, 361) 0.203197670919 0.203197670919
+
+365
+Subject 10
+session 1
+trial 1
+take 
+24000
+
+361
+Subject 10
+session 1
+trial 1
+take 
+4800
+
+
+_ALL_lb_200-300-OnALL
+(368, 366) 0.216844995823 0.216844995823
+
+368
+Subject 10
+session 1
+trial 1
+take 
+38400
+
+366
+Subject 10
+session 1
+trial 1
+take 
+28800
