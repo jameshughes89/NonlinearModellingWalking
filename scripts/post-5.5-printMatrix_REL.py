@@ -9,6 +9,8 @@ import matplotlib.pylab as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 modelSet = ['', '_ALL_lb', '_ALL_lb_200-300', '_Only_lb', '_ALL_lb_200-300-OnALL']
+#modelSet = ['_Only_lb', '_ALL_lb', '', '_ALL_lb_200-300', '_ALL_lb_200-300-OnALL']	#bad because titles will be broken
+
 subjects = ['Subject 1', 'Subject 2', 'Subject 3', 'Subject 4', 'Subject 5', 'Subject 6', 'Subject 7', 'Subject 8', 'Subject 9', 'Subject 10']
 
 for count, mod in enumerate(modelSet):
@@ -212,6 +214,8 @@ for count, mod in enumerate(modelSet):
 	divider = make_axes_locatable(axes)
 	cax = divider.append_axes("right", size="5%", pad=0.50)
 	plt.colorbar(img, cax=cax, label='Mean Absolute Percentage Error')
+
+	print np.median(relMatSmall2, axis=0)[12:20]
 
 	plt.show()
 

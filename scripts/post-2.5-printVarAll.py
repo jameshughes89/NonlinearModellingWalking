@@ -125,4 +125,4 @@ for mod in modelSet:
 	print 'all\n', np.mean(allVarCounts, axis=0)
 
 
-	plt.show()
+plt.show()

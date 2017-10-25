@@ -93,6 +93,13 @@ for count, mod in enumerate(modelSet):
 	#plt.show()
 
 
+	# print error diag
+	s = 0
+	for i in range(abeMat.shape[0]):
+		s+= abeMat[i,i]
+
+	print s/abeMat.shape[0]
+
 
 	# I think this is backwards
 	'''
@@ -150,7 +157,6 @@ for count, mod in enumerate(modelSet):
 	#plt.show()
 
 
-	
 
 	#['Su1 Se1 Tr1 0', 'Su1 Se1 Tr1 4800', 'Su1 Se1 Tr1 9600', 'Su1 Se1 Tr1 14400', 'Su1 Se1 Tr1 19200', 'Su1 Se1 Tr1 24000', 'Su1 Se1 Tr1 28800', 'Su1 Se1 Tr1 33600', 'Su1 Se1 Tr1 38400', 'Su1 Se1 Tr1 43200', 'Su1 Se1 Tr2 0', 'Su1 Se1 Tr2 4800', 'Su1 Se1 Tr2 9600', 'Su1 Se1 Tr2 14400', 'Su1 Se1 Tr2 19200', 'Su1 Se1 Tr2 24000', 'Su1 Se1 Tr2 28800', 'Su1 Se1 Tr2 33600', 'Su1 Se1 Tr2 38400', 'Su1 Se1 Tr2 43200', 'Su1 Se2 Tr1 0', 'Su1 Se2 Tr1 4800', 'Su1 Se2 Tr1 9600', 'Su1 Se2 Tr1 14400', 'Su1 Se2 Tr1 19200', 'Su1 Se2 Tr1 24000', 'Su1 Se2 Tr1 28800', 'Su1 Se2 Tr1 33600', 'Su1 Se2 Tr1 38400', 'Su1 Se2 Tr1 43200', 'Su1 Se2 Tr2 0', 'Su1 Se2 Tr2 4800', 'Su1 Se2 Tr2 9600', 'Su1 Se2 Tr2 14400', 'Su1 Se2 Tr2 19200', 'Su1 Se2 Tr2 24000', 'Su1 Se2 Tr2 28800', 'Su1 Se2 Tr2 33600', 'Su1 Se2 Tr2 38400', 'Su1 Se2 Tr2 43200', 'Su2 Se1 Tr1 0', 'Su2 Se1 Tr1 4800', 'Su2 Se1 Tr1 9600', 'Su2 Se1 Tr1 14400', 'Su2 Se1 Tr1 19200', 'Su2 Se1 Tr1 24000', 'Su2 Se1 Tr1 28800', 'Su2 Se1 Tr1 33600', 'Su2 Se1 Tr1 38400', 'Su2 Se1 Tr1 43200', 'Su2 Se1 Tr2 0', 'Su2 Se1 Tr2 4800', 'Su2 Se1 Tr2 9600', 'Su2 Se1 Tr2 14400', 'Su2 Se1 Tr2 19200', 'Su2 Se1 Tr2 24000', 'Su2 Se1 Tr2 28800', 'Su2 Se1 Tr2 33600', 'Su2 Se1 Tr2 38400', 'Su2 Se1 Tr2 43200', 'Su2 Se2 Tr1 0', 'Su2 Se2 Tr1 4800', 'Su2 Se2 Tr1 9600', 'Su2 Se2 Tr1 14400', 'Su2 Se2 Tr1 19200', 'Su2 Se2 Tr1 24000', 'Su2 Se2 Tr1 28800', 'Su2 Se2 Tr1 33600', 'Su2 Se2 Tr1 38400', 'Su2 Se2 Tr1 43200', 'Su2 Se2 Tr2 0', 'Su2 Se2 Tr2 4800', 'Su2 Se2 Tr2 9600', 'Su2 Se2 Tr2 14400', 'Su2 Se2 Tr2 19200', 'Su2 Se2 Tr2 24000', 'Su2 Se2 Tr2 28800', 'Su2 Se2 Tr2 33600', 'Su2 Se2 Tr2 38400', 'Su2 Se2 Tr2 43200', 'Su3 Se1 Tr1 0', 'Su3 Se1 Tr1 4800', 'Su3 Se1 Tr1 9600', 'Su3 Se1 Tr1 14400', 'Su3 Se1 Tr1 19200', 'Su3 Se1 Tr1 24000', 'Su3 Se1 Tr1 28800', 'Su3 Se1 Tr1 33600', 'Su3 Se1 Tr1 38400', 'Su3 Se1 Tr1 43200', 'Su3 Se1 Tr2 0', 'Su3 Se1 Tr2 4800', 'Su3 Se1 Tr2 9600', 'Su3 Se1 Tr2 14400', 'Su3 Se1 Tr2 19200', 'Su3 Se1 Tr2 24000', 'Su3 Se1 Tr2 28800', 'Su3 Se1 Tr2 33600', 'Su3 Se1 Tr2 38400', 'Su3 Se1 Tr2 43200', 'Su3 Se2 Tr1 0', 'Su3 Se2 Tr1 4800', 'Su3 Se2 Tr1 9600', 'Su3 Se2 Tr1 14400', 'Su3 Se2 Tr1 19200', 'Su3 Se2 Tr1 24000', 'Su3 Se2 Tr1 28800', 'Su3 Se2 Tr1 33600', 'Su3 Se2 Tr1 38400', 'Su3 Se2 Tr1 43200', 'Su3 Se2 Tr2 0', 'Su3 Se2 Tr2 4800', 'Su3 Se2 Tr2 9600', 'Su3 Se2 Tr2 14400', 'Su3 Se2 Tr2 19200', 'Su3 Se2 Tr2 24000', 'Su3 Se2 Tr2 28800', 'Su3 Se2 Tr2 33600', 'Su3 Se2 Tr2 38400', 'Su3 Se2 Tr2 43200', 'Su4 Se1 Tr1 0', 'Su4 Se1 Tr1 4800', 'Su4 Se1 Tr1 9600', 'Su4 Se1 Tr1 14400', 'Su4 Se1 Tr1 19200', 'Su4 Se1 Tr1 24000', 'Su4 Se1 Tr1 28800', 'Su4 Se1 Tr1 33600', 'Su4 Se1 Tr1 38400', 'Su4 Se1 Tr1 43200', 'Su4 Se1 Tr2 0', 'Su4 Se1 Tr2 4800', 'Su4 Se1 Tr2 9600', 'Su4 Se1 Tr2 14400', 'Su4 Se1 Tr2 19200', 'Su4 Se1 Tr2 24000', 'Su4 Se1 Tr2 28800', 'Su4 Se1 Tr2 33600', 'Su4 Se1 Tr2 38400', 'Su4 Se1 Tr2 43200', 'Su4 Se2 Tr1 0', 'Su4 Se2 Tr1 4800', 'Su4 Se2 Tr1 9600', 'Su4 Se2 Tr1 14400', 'Su4 Se2 Tr1 19200', 'Su4 Se2 Tr1 24000', 'Su4 Se2 Tr1 28800', 'Su4 Se2 Tr1 33600', 'Su4 Se2 Tr1 38400', 'Su4 Se2 Tr1 43200', 'Su4 Se2 Tr2 0', 'Su4 Se2 Tr2 4800', 'Su4 Se2 Tr2 9600', 'Su4 Se2 Tr2 14400', 'Su4 Se2 Tr2 19200', 'Su4 Se2 Tr2 24000', 'Su4 Se2 Tr2 28800', 'Su4 Se2 Tr2 33600', 'Su4 Se2 Tr2 38400', 'Su4 Se2 Tr2 43200']
 	#['Su1 Se1 Tr1', 'Su1 Se1 Tr2', 'Su1 Se2 Tr1', 'Su1 Se2 Tr2', 'Su2 Se1 Tr1', 'Su2 Se1 Tr2', 'Su2 Se2 Tr1', 'Su2 Se2 Tr2', 'Su3 Se1 Tr1', 'Su3 Se1 Tr2', 'Su3 Se2 Tr1', 'Su3 Se2 Tr2', 'Su4 Se1 Tr1', 'Su4 Se1 Tr2', 'Su4 Se2 Tr1', 'Su4 Se2 Tr2']

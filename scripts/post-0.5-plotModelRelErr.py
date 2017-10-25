@@ -126,7 +126,7 @@ pltz = []
 model = func_365_ALL_lb_200_300
 
 
-'''
+
 # For Fit Data (SMALL)
 mod = modelSet[2]
 sub = subjects[9]
@@ -171,7 +171,7 @@ mod = modelSet[1]
 sub = subjects[9]
 ses = sessions[0]
 tri = trials[0]
-bat = batch[8]
+bat = batch[5]
 
 print sub + '_' + ses + '_' + tri + '_' + str(bat) + mod +'.csv'
 dataFit = np.array(list(csv.reader(open('../MORE_DATA/' + sub + '_' + ses + '_' + tri + '_' + str(bat) + mod +'.csv','r')))).astype(float)
@@ -242,9 +242,9 @@ pltz[2].set_title('Model Applied to Unseen Data')
 
 
 
-plt.suptitle('Models fit to Lower Back Only', fontsize=16)
+plt.suptitle('Models fit to 100 Time Points of Lower Back Only', fontsize=16)
 plt.show()
-'''
+
 
 
 
@@ -332,10 +332,10 @@ pltz[1].set_title('Model Applied to Unseen Data')
 
 plt.suptitle('Models fit to Lower Back Only', fontsize=16)
 plt.show()
-'''
 
 
-'''
+
+
 # LOWER BACK
 pltz = []
 model = func_361_ALL_lb
@@ -419,7 +419,7 @@ pltz[1].set_title('Model Applied to Unseen Data')
 
 plt.suptitle('Models fit to Lower Back', fontsize=16)
 plt.show()
-'''
+
 
 
 # RIGHT LEG
@@ -504,4 +504,4 @@ pltz[1].set_title('Model Applied to Unseen Data')
 
 plt.suptitle('Models fit to Right Leg', fontsize=16)
 plt.show()
-
+'''
